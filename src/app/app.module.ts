@@ -19,28 +19,14 @@ import { PlainHtmlComponent,BooStrapHtmlComponent, HTMLComponent, MaterialHtmlCo
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    BaseComponent,
-    NavigationMenuComponent,
-    ColumnsComponent,
-    TablesComponent,
-    CSharpComponent,
-    TypeScriptComponent,
-    DALComponent,
-    DapperComponent,
-    EFDataAnnotationComponent,
-    EFDBContextComponent,
-    EFFluentMapComponent,
-    PocoComponent,
-    PlainHtmlComponent,BooStrapHtmlComponent, HTMLComponent, MaterialHtmlComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppComponent
   ],
   providers: [
     provideAnimationsAsync('noop'),

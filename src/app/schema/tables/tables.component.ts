@@ -10,7 +10,8 @@ import {MatPaginatorDefaultOptions } from '@angular/material/paginator';
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
-  styleUrls: ['./tables.component.css']
+  styleUrls: ['./tables.component.css'],
+  standalone: false,
 })
 export class TablesComponent extends BaseComponent{
 
@@ -24,12 +25,14 @@ export class TablesComponent extends BaseComponent{
    appService: SchemaService){ super(appService); }
   
   ngOnInit() {
-    this.tables.paginator = this.tablePaginator;
+    // Initialization logic if needed
   }
-  ngAfterViewInit()
-  {
+
+  ngAfterViewInit() {
+    this.tables.paginator = this.tablePaginator;
     this.GetData();
   }
+
   public GetData()
   {
     this.connectStr = sessionStorage.getItem('ConnectStr') as string;
