@@ -1,4 +1,4 @@
-import { MatTableDataSource } from '@angular/material/table';
+import { MatColumnDef, MatTable, MatTableDataSource } from '@angular/material/table';
 import { Component, ViewChild, OnInit, Inject } from '@angular/core';
 import { BaseComponent } from '../../base/base.component';
 import { SchemaService } from '../../schema/schemaService';
@@ -11,7 +11,8 @@ import {MatPaginatorDefaultOptions } from '@angular/material/paginator';
   selector: 'app-tables',
   templateUrl: './tables.component.html',
   styleUrls: ['./tables.component.css'],
-  standalone: false,
+  standalone: true,
+  imports: [MatPaginator, MatTable, MatColumnDef, MatPaginator],
 })
 export class TablesComponent extends BaseComponent{
 

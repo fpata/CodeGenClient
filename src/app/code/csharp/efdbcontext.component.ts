@@ -6,7 +6,9 @@ import { CSharpComponent } from './csharp.component';
   selector: 'app-efdbcontext',
   templateUrl: './csharp.component.html',
   styles: [
-  ]
+  ],
+  imports: [FormsModule],
+  standalone: true
 })
 export class EFDBContextComponent extends CSharpComponent {
   ngAfterViewInit()

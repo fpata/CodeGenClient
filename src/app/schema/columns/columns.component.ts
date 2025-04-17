@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatColumnDef, MatTable, MatTableDataSource } from '@angular/material/table';
 import { BaseComponent } from '../../base/base.component';
 import { SESSION_STORAGE, WebStorageService } from 'ngx-webstorage-service';
 import { SchemaService } from '../../schema/schemaService';
@@ -8,7 +8,9 @@ import { SchemaService } from '../../schema/schemaService';
 @Component({
   selector: 'app-columns',
   templateUrl: './columns.component.html',
-  styleUrls: ['./columns.component.css']
+  styleUrls: ['./columns.component.css'],
+  imports: [MatPaginator,MatTable,MatColumnDef],
+  standalone: true
 })
 
 export class ColumnsComponent extends BaseComponent {

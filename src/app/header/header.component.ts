@@ -3,13 +3,18 @@ import {SESSION_STORAGE, WebStorageService} from 'ngx-webstorage-service';
 import { BaseComponent } from '../base/base.component';
 import { SchemaService } from '../schema/schemaService';
 import { MatTableDataSource } from '@angular/material/table';
-import { NgModel } from '@angular/forms';
-
+import { FormsModule, NgModel } from '@angular/forms';
+import {  MatFormFieldModule } from '@angular/material/form-field';
+import { MatRadioButton,MatRadioGroup } from '@angular/material/radio';
+import { MatOption } from '@angular/material/select';
+import { CommonModule } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  standalone: false
+  imports: [MatFormFieldModule, MatRadioGroup, MatRadioButton, FormsModule, MatOption, CommonModule, MatInputModule],
+  standalone: true
 })
 
 export class HeaderComponent extends BaseComponent {

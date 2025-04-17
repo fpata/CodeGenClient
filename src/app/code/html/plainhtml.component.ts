@@ -4,7 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-plainHtml',
-  templateUrl: './plainHtml.component.html'
+  templateUrl: './plainHtml.component.html',
+  imports: [FormsModule],
+  standalone: true
 })
 
 export class PlainHtmlComponent extends HTMLComponent

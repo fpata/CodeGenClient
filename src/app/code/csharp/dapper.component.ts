@@ -6,7 +6,9 @@ import { CSharpComponent } from './csharp.component';
   selector: 'app-dapper',
   templateUrl: './csharp.component.html',
   styles: [
-  ]
+  ],
+  imports: [FormsModule],
+  standalone: true
 })
 export class DapperComponent extends CSharpComponent {
   ngAfterViewInit()

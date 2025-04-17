@@ -4,7 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dal',
-  templateUrl: './csharp.component.html'
+  templateUrl: './csharp.component.html',
+  imports: [FormsModule],
+  standalone: true
 })
 
 export class DALComponent extends CSharpComponent

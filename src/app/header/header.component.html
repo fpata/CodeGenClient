@@ -1,7 +1,7 @@
 <div>
     <div>
         <mat-form-field class="width100">
-            <input matInput placeholder="Connection String" id="txtConectStr" [(ngModel)]="connectStr">
+            <input matInput placeholder="Connection String" name="txtConnectStr" id="txtConectStr" [(ngModel)]="connectStr" />
         </mat-form-field>&nbsp;&nbsp;
     </div>
     <div>
@@ -23,7 +23,7 @@
     </div>
     <br>
     <mat-form-field class="width100">
-        <mat-select placeholder="Tables" id="cbTables" (ngModel)="selectedTable"
+        <mat-select placeholder="Tables" id="cbTables" name="cbTables" (ngModel)="selectedTable"
             (selectionChange)="cbTables_Select($event)">
             <mat-option *ngFor="let table of tables.data" [value]="table">
                 {{table['name']}}

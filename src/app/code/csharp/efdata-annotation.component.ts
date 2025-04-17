@@ -6,7 +6,9 @@ import { CSharpComponent } from './csharp.component';
   selector: 'app-efdata-annotation',
   templateUrl: './csharp.component.html',
   styles: [
-  ]
+  ],
+  imports: [FormsModule],
+  standalone: true
 })
 export class EFDataAnnotationComponent extends CSharpComponent{
   ngAfterViewInit() {

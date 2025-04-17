@@ -4,7 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-html',
-    templateUrl:'./html.component.html'
+    templateUrl:'./html.component.html',
+    imports: [FormsModule],
+    standalone: true
   })
 
 export class HTMLComponent extends BaseComponent

@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
 import {MatIcon} from '@angular/material/icon';
-
+import { MatTree ,MatNestedTreeNode, MatTreeNode} from '@angular/material/tree';
+import { RouterLink } from '@angular/router';
 
 interface DBGenNavigation {
   name: string;
@@ -12,7 +13,9 @@ interface DBGenNavigation {
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation-menu.component.html',
-  styleUrls: ['./navigation-menu.component.css']
+  styleUrls: ['./navigation-menu.component.css'],
+  standalone: true,
+  imports: [MatTree, MatIcon, RouterLink, MatNestedTreeNode, MatTreeNode]
 })
 
 export class NavigationMenuComponent {

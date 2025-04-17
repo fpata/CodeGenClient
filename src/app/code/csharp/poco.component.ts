@@ -5,7 +5,9 @@ import { CSharpComponent } from './csharp.component';
   selector: 'app-poco',
   templateUrl: './csharp.component.html',
   styles: [
-  ]
+  ],
+  imports: [FormsModule],
+  standalone: true
 })
 export class PocoComponent extends CSharpComponent{
   ngAfterViewInit() {

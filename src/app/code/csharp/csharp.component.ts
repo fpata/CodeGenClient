@@ -5,7 +5,9 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-csharp',
-    templateUrl:'./csharp.component.html'
+    templateUrl:'./csharp.component.html',
+    imports: [FormsModule],
+    standalone: true
   })
   export class CSharpComponent extends BaseComponent {
     public code : string = '';

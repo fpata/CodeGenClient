@@ -1,10 +1,13 @@
 import { Component , AfterViewInit } from '@angular/core';
 import { BaseComponent } from '../../base/base.component';
-
+import { MatFormField } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-typescript',
   templateUrl: './typescript.component.html',
-  styleUrls: ['./typescript.component.css']
+  styleUrls: ['./typescript.component.css'],
+  imports: [MatFormField, FormsModule],
+  standalone: true
 })
 
 export class TypeScriptComponent extends BaseComponent {
